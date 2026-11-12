@@ -1,0 +1,250 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+/* Menggunakan Flexbox: logo di kiri, navigasi di kanan */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1a1a2e;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e94560, #f08a5d);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigasi menggunakan Flexbox */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #e94560;
+    border-bottom: 2px solid #e94560;
+}
+
+/* ===== SECTION 1: HERO / PENGENALAN ===== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 40px;
+    background: linear-gradient(135deg, #0f3460, #16213e, #1a1a2e);
+    color: #fff;
+    min-height: 70vh;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin-bottom: 35px;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #e94560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #c73651;
+    transform: translateY(-2px);
+}
+
+/* ===== SECTION 2: FITUR ===== */
+.fitur {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.fitur h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #1a1a2e;
+    position: relative;
+}
+
+.fitur h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e94560;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* Kartu fitur menggunakan Flexbox */
+.fitur-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.fitur-card {
+    background-color: #fff;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    max-width: 300px;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fitur-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.fitur-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.fitur-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #1a1a2e;
+}
+
+.fitur-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ===== FOOTER ===== */
+/* Tiga bagian sejajar menggunakan Flexbox */
+footer {
+    background-color: #1a1a2e;
+    color: #ccc;
+    padding: 50px 40px 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Footer kiri: Logo */
+.footer-kiri {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-kiri .logo {
+    margin-bottom: 12px;
+}
+
+.footer-kiri p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Footer tengah: Deskripsi singkat */
+.footer-tengah {
+    flex: 1.5;
+    min-width: 250px;
+}
+
+.footer-tengah h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.footer-tengah p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Footer kanan: Informasi kontak */
+.footer-kanan {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-kanan h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.footer-kanan p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
